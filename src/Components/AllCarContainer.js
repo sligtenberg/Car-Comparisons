@@ -6,6 +6,7 @@ function AllCarContainer({ allCars, compareCar }) {
         <CarCard
             key={car.id}
             car={car}
+            detailView={false}
             handleClick={() => compareCar(car)}
         />)
 

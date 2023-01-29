@@ -6,6 +6,7 @@ function ComparisonContainer({ comparedCars, unCompareCar }) {
         <CarCard
             key={car.id}
             car={car}
+            detailView={true}
             handleClick={() => unCompareCar(car)}
         />)
 
