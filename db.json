@@ -1,76 +1,78 @@
 {
-	"cars": [
-		{
-			"id": 1,
-			"make": "Ford",
-			"model": "Ranger",
-			"year": 2003,
-			"miles": 200650,
-			"views": 0
-		},
-		{
-			"id": 2,
-			"make": "Toyota",
-			"model": "RAV4",
-			"year": 2013,
-			"miles": 100120,
-			"views": 0
-		},
-		{
-			"id": 3,
-			"make": "Volvo",
-			"model": "840",
-			"year": 1996,
-			"miles": 210040,
-			"views": 0
-		},
-		{
-			"id": 4,
-			"make": "Chevrolet",
-			"model": "Nova",
-			"year": 1987,
-			"miles": 350000,
-			"views": 0
-		},
-		{
-			"id": 5,
-			"make": "Chevrolet",
-			"model": "Impala",
-			"year": 1974,
-			"miles": 105040,
-			"views": 0
-		},
-		{
-			"id": 6,
-			"make": "Honda",
-			"model": "Accord",
-			"year": 2004,
-			"miles": 280000,
-			"views": 0
-		},
-		{
-			"id": 7,
-			"make": "Dodge",
-			"model": "Grand Caravan",
-			"year": 2006,
-			"miles": 175000,
-			"views": 0
-		},
-		{
-			"id": 8,
-			"make": "Subaru",
-			"model": "Outback",
-			"year": 1997,
-			"miles": 180000,
-			"views": 0
-		},
-		{
-			"id": 9,
-			"make": "Subaru",
-			"model": "Impreza",
-			"year": 2013,
-			"miles": 102020,
-			"views": 0
-		}
-	]
+  "cars": [
+    {
+      "id": 1,
+      "make": "Ford",
+      "model": "Ranger",
+      "year": 2003,
+      "miles": 200650,
+      "views": 0,
+      "notes": "Leaks oil form the rear differential"
+    },
+    {
+      "id": 2,
+      "make": "Toyota",
+      "model": "RAV4",
+      "year": 2013,
+      "miles": 100120,
+      "views": 0,
+      "notes": "Mom's car"
+    },
+    {
+      "id": 3,
+      "make": "Volvo",
+      "model": "840",
+      "year": 1996,
+      "miles": 210040,
+      "views": 0
+    },
+    {
+      "id": 4,
+      "make": "Chevrolet",
+      "model": "Nova",
+      "year": 1987,
+      "miles": 350000,
+      "views": 0
+    },
+    {
+      "id": 5,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "year": 1974,
+      "miles": 105040,
+      "views": 0
+    },
+    {
+      "id": 6,
+      "make": "Honda",
+      "model": "Accord",
+      "year": 2004,
+      "miles": 280000,
+      "views": 0
+    },
+    {
+      "id": 7,
+      "make": "Dodge",
+      "model": "Grand Caravan",
+      "year": 2006,
+      "miles": 175000,
+      "views": 0
+    },
+    {
+      "id": 8,
+      "make": "Subaru",
+      "model": "Outback",
+      "year": 1997,
+      "miles": 180000,
+      "views": 0
+    },
+    {
+      "id": 9,
+      "make": "Subaru",
+      "model": "Impreza",
+      "year": 2013,
+      "miles": 102020,
+      "views": 0
+    }
+  ]
 }

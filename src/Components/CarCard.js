@@ -7,11 +7,11 @@ function CarCard({ car, handleClick, detailView }) {
     }
 
     return (
-        <div onClick={handleClick}>
+        <div >
           <div className="card">
             <div className="card-body">
-              <h4 className="card-title">{car.make} {car.model}</h4>
-              <p className="card-text">{details()}</p>
+              <h4 className="card-title" onClick={handleClick}>{car.make} {car.model}</h4>
+              <div className="card-text">{details()}</div>
             </div>
           </div>
         </div>
