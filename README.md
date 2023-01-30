@@ -1,6 +1,22 @@
-# How to use the app
+# Stevo's Cars Intro
 
-Stevo's Cars allows users to select cars to compare side-by-side. Click a car to add it to the comparison area, where more details are displayed. Click the car in the comparison area to remove it.
+Stevo's Cars allows users to select cars to compare side-by-side.
+
+# Implementation
+
+To install Stevo's Cars, clone the repository to your local environement. Car data is stored in the db.json file. Start a JSON server to access it using the command:
+
+$json-server --watch db.json
+
+This will create a server storing the car data at http://localhost:3001/cars. In another terminal window, run the command:
+
+$npm run server
+
+This will run the backend on the port 3001
+
+# Using the app
+
+In the app, click on a car to add it to the comparison area. In the comparison area, more details are displayed in a way that the cars may be compared side-by-side. In the comparison area, click a car's title to remove it. The notes can be modified. When submitted, these notes with persist to the backend.
 
 # Getting Started with Create React App
 
