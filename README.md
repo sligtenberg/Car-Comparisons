@@ -1,3 +1,7 @@
+# How to use the app
+
+Stevo's Cars allows users to select cars to compare side-by-side. Click a car to add it to the comparison area, where more details are displayed. Click the car in the comparison area to remove it.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
