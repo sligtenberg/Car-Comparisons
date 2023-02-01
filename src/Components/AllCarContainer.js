@@ -1,8 +1,8 @@
 import React from "react";
 import CarCard from "./CarCard";
 
-function AllCarContainer({ allCars, compareCar }) {
-    const carComponents = allCars.map(car => 
+function AllCarContainer({ cars, compareCar }) {
+    const carComponents = cars.map(car => 
         <CarCard
             key={car.id}
             car={car}

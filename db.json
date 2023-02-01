@@ -7,7 +7,8 @@
       "year": 2003,
       "miles": 200650,
       "views": 0,
-      "notes": "Leaks oil form the rear differential"
+      "notes": "Leaks oil form the rear differential",
+      "isCompared": false
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "year": 2013,
       "miles": 100120,
       "views": 0,
-      "notes": "Mom's car"
+      "notes": "Mom's car",
+      "isCompared": false
     },
     {
       "id": 3,
@@ -24,7 +26,8 @@
       "model": "840",
       "year": 1996,
       "miles": 210040,
-      "views": 0
+      "views": 0,
+      "isCompared": false
     },
     {
       "id": 4,
@@ -32,7 +35,8 @@
       "model": "Nova",
       "year": 1987,
       "miles": 350000,
-      "views": 0
+      "views": 0,
+      "isCompared": false
     },
     {
       "id": 5,
@@ -40,7 +44,8 @@
       "model": "Impala",
       "year": 1974,
       "miles": 105040,
-      "views": 0
+      "views": 0,
+      "isCompared": false
     },
     {
       "id": 6,
@@ -48,7 +53,8 @@
       "model": "Accord",
       "year": 2004,
       "miles": 280000,
-      "views": 0
+      "views": 0,
+      "isCompared": false
     },
     {
       "id": 7,
@@ -56,7 +62,8 @@
       "model": "Grand Caravan",
       "year": 2006,
       "miles": 175000,
-      "views": 0
+      "views": 0,
+      "isCompared": false
     },
     {
       "id": 8,
@@ -64,7 +71,8 @@
       "model": "Outback",
       "year": 1997,
       "miles": 180000,
-      "views": 0
+      "views": 0,
+      "isCompared": false
     },
     {
       "id": 9,
@@ -72,7 +80,9 @@
       "model": "Impreza",
       "year": 2013,
       "miles": 102020,
-      "views": 0
+      "views": 0,
+      "notes": "Maddie's Car",
+      "isCompared": false
     }
   ]
 }

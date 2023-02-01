@@ -7,21 +7,28 @@ import AllCarContainer from './AllCarContainer';
 import ComparisonContainer from './ComparisonContainer';
 
 function App() {
-    const [allCars, setAllCars] = useState([])
-    const [comparedCars, setComparedCars] = useState([])
+    const [cars, setCars] = useState([])
 
+    // populate the main car container with all the cars
     useEffect(() => {
         fetch('http://localhost:3001/cars')
         .then(r => r.json())
-        .then(setAllCars)
+        .then(setCars)
     }, [])
 
-    function compareCar(CarToCompare) {
-      if (!comparedCars.includes(CarToCompare)) setComparedCars([...comparedCars, CarToCompare])
+    // comparedCars filters the cas down to the ones that are flagged for comparison
+    const comparedCars = cars.filter(car => car.isCompared ? true : false)
+
+    // this function flags a car for comparison. does not persist to the server
+    function compareCar(carToCompare) {
+      carToCompare.isCompared = true
+      setCars(cars.map(car => car.id === carToCompare.id ? carToCompare : car))
     }
 
+    // this function removes a car from the comparison container. does not persist to server
     function unCompareCar(carToUncompare) {
-      setComparedCars(comparedCars.filter(car => car.id === carToUncompare.id ? false : true))
+      carToUncompare.isCompared = false
+      setCars(cars.map(car => car.id === carToUncompare.id ? carToUncompare : car))
     }
 
   return (
@@ -30,10 +37,10 @@ function App() {
       <Filter />
       <div className="row">
         <div className="col-8">
-          <AllCarContainer allCars={allCars} compareCar={compareCar}/>
+          <AllCarContainer cars={cars} compareCar={compareCar}/>
         </div>
         <div className="col-4">
-          <ComparisonContainer comparedCars={comparedCars} unCompareCar={unCompareCar}/>
+          <ComparisonContainer unCompareCar={unCompareCar} comparedCars={comparedCars}/>
         </div>
       </div>
     </div>

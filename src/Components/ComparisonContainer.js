@@ -1,7 +1,7 @@
 import React from "react";
 import CarCard from "./CarCard";
 
-function ComparisonContainer({ comparedCars, unCompareCar }) {
+function ComparisonContainer({ unCompareCar, comparedCars }) {
     const carComponents = comparedCars.map(car => 
         <CarCard
             key={car.id}
