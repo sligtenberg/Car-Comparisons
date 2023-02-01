@@ -20,15 +20,24 @@ function App() {
     const comparedCars = cars.filter(car => car.isCompared ? true : false)
 
     // this function flags a car for comparison. does not persist to the server
-    function compareCar(carToCompare) {
-      carToCompare.isCompared = true
-      setCars(cars.map(car => car.id === carToCompare.id ? carToCompare : car))
+    function compareCar(carToCompareId) {
+      setCars(cars.map(car => {
+        if (car.id === carToCompareId) car.isCompared = true
+        return car
+      }))
     }
 
     // this function removes a car from the comparison container. does not persist to server
-    function unCompareCar(carToUncompare) {
-      carToUncompare.isCompared = false
-      setCars(cars.map(car => car.id === carToUncompare.id ? carToUncompare : car))
+    function unCompareCar(carToUncompareId) {
+      setCars(cars.map(car => {
+        if (car.id === carToUncompareId) car.isCompared = false 
+        return car
+      }))
+    }
+
+    // update the notes on the frontend without refreshing
+    function updateNotes(carToUpdate) {
+      setCars(cars.map(car => car.id === carToUpdate.id ? carToUpdate : car))
     }
 
   return (
@@ -40,7 +49,11 @@ function App() {
           <AllCarContainer cars={cars} compareCar={compareCar}/>
         </div>
         <div className="col-4">
-          <ComparisonContainer unCompareCar={unCompareCar} comparedCars={comparedCars}/>
+          <ComparisonContainer
+            unCompareCar={unCompareCar}
+            comparedCars={comparedCars}
+            updateNotes={updateNotes}
+          />
         </div>
       </div>
     </div>

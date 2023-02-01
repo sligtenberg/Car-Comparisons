@@ -1,9 +1,9 @@
 import React from "react";
 import CarDetails from "./CarDetails";
 
-function CarCard({ car, handleClick, detailView }) {
+function CarCard({ car, handleClick, detailView, updateNotes }) {
     const details = () => {
-        return detailView ? <CarDetails car={car}/> : null
+        return detailView ? <CarDetails car={car} updateNotes={updateNotes}/> : null
     }
 
     return (
