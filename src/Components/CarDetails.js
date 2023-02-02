@@ -22,7 +22,7 @@ function CarDetails({ car, updateNotes }) {
             <form onSubmit={handleNotesSubmit}>
                 <label>Notes: </label>
                 <input type="text" value={notes} onChange={event => setNotes(event.target.value)}/>
-                <button >Submit</button>
+                <button>Submit</button>
             </form>
         </div>
     )

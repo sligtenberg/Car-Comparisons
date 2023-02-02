@@ -5,7 +5,7 @@
       "make": "Ford",
       "model": "Ranger",
       "year": 2003,
-      "miles": 200650,
+      "miles": 206050,
       "views": 0,
       "notes": "Leaks oil form the rear differential",
       "isCompared": false
@@ -63,7 +63,8 @@
       "year": 2006,
       "miles": 175000,
       "views": 0,
-      "isCompared": false
+      "isCompared": false,
+      "notes": "The Vansion!"
     },
     {
       "id": 8,

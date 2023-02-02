@@ -8,6 +8,7 @@ import ComparisonContainer from './ComparisonContainer';
 
 function App() {
     const [cars, setCars] = useState([])
+    const [milesRange, setMilesRange] = useState({min: "", max: ""})
 
     // populate the main car container with all the cars
     useEffect(() => {
@@ -18,6 +19,13 @@ function App() {
 
     // comparedCars filters the cas down to the ones that are flagged for comparison
     const comparedCars = cars.filter(car => car.isCompared ? true : false)
+
+
+    const filteredCars = cars.filter(car => 
+      // conditions for which must be met for the car to be displayed
+      car.miles >= milesRange.min &&
+      car.miles <= milesRange.max
+      ? true : false)
 
     // this function flags a car for comparison. does not persist to the server
     function compareCar(carToCompareId) {
@@ -43,10 +51,10 @@ function App() {
   return (
     <div>
       <Header />
-      <Filter />
+      <Filter milesRange={milesRange} setMilesRange={setMilesRange}/>
       <div className="row">
         <div className="col-8">
-          <AllCarContainer cars={cars} compareCar={compareCar}/>
+          <AllCarContainer cars={filteredCars} compareCar={compareCar}/>
         </div>
         <div className="col-4">
           <ComparisonContainer
