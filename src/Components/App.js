@@ -7,16 +7,44 @@ import ComparisonContainer from './ComparisonContainer';
 import NavBar from './NavBar';
 
 function App() {
-    const [viewMode, setViewMode] = useState("viewCars")
+    const [viewMode, setViewMode] = useState("/view_cars")
     const [cars, setCars] = useState([])
     const [milesRange, setMilesRange] = useState({min: "", max: ""})
     const [yearRange, setYearRange] = useState({min: "", max: ""})
     const [makeFilter, setMakeFilter] = useState("")
     const [modelFilter, setModelFilter] = useState("")
 
-    // function viewModeControl() {
-    //   if (viewMode = "viewCars") {}
-    // }
+    function viewModeControl() {
+      switch(viewMode) {
+        case "/view_cars":
+          return (
+          <div>
+            <Filter
+              milesRange={milesRange}
+              setMilesRange={setMilesRange}
+              yearRange={yearRange}
+              setYearRange={setYearRange}
+              makeFilter={makeFilter}
+              setMakeFilter={setMakeFilter}
+              modelFilter={modelFilter}
+              setModelFilter={setModelFilter}
+            />
+            <div id="main-container">
+              <AllCarContainer cars={filteredCars} compareCar={compareCar}/>
+              <ComparisonContainer
+                unCompareCar={unCompareCar}
+                comparedCars={comparedCars}
+                updateNotes={updateNotes}
+              />
+            </div>
+          </div>
+          )
+        // case "/add_car":
+        //   return (
+
+        //   )
+      }
+    }
 
     // populate the main car container with all the cars
     useEffect(() => {
@@ -64,26 +92,7 @@ function App() {
     <div>
       <Header />
       <NavBar />
-      <div >
-        <Filter
-          milesRange={milesRange}
-          setMilesRange={setMilesRange}
-          yearRange={yearRange}
-          setYearRange={setYearRange}
-          makeFilter={makeFilter}
-          setMakeFilter={setMakeFilter}
-          modelFilter={modelFilter}
-          setModelFilter={setModelFilter}
-        />
-        <div id="main-container">
-          <AllCarContainer cars={filteredCars} compareCar={compareCar}/>
-          <ComparisonContainer
-            unCompareCar={unCompareCar}
-            comparedCars={comparedCars}
-            updateNotes={updateNotes}
-          />
-        </div>
-      </div>
+      {viewModeControl()}
     </div>
   );
 }

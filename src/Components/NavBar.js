@@ -5,6 +5,7 @@ function NavBar() {
         <div id="nav-bar">
             <button>View Cars</button>
             <button>Add Car</button>
+            <button>TBD</button>
         </div>
     )
 }
