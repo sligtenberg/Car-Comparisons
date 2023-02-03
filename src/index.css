@@ -6,6 +6,31 @@ body {
 h1 {
   text-align: center;
 }
+
+h3 {
+  margin: 10px;
+}
+
+nav {
+  display: flex;
+  background: lightcoral;
+  width: 100%;
+}
+
+a {
+  background-color: lightgrey;
+  border: 1px solid;
+  border-radius: 4px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin: 5px;
+  font-size: x-large;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .car {
   color: blue;
   font-weight: bold;
@@ -22,20 +47,6 @@ h1 {
   padding: 10px;
   margin: 5px;
   background: lightblue;
-}
-
-#nav-bar {
-  display: flex;
-  background: lightcoral;
-  width: 100%;
-}
-
-#nav-bar button {
-  background-color: lightgrey;
-  border: 1px solid;
-  border-radius: 4px;
-  margin: 5px;
-  font-size: x-large;
 }
 
 #compare-box {
