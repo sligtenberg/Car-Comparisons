@@ -77,13 +77,31 @@
       "isCompared": false
     },
     {
-      "Make": "Honda",
-      "Model": "Odysset",
-      "Year": 1999,
-      "Miles": 200000,
-      "Notes": "Test",
+      "make": "Honda",
+      "model": "Odyssey",
+      "year": 1999,
+      "miles": 200000,
+      "notes": "test",
       "isCompared": false,
       "id": 10
+    },
+    {
+      "make": "Ford",
+      "model": "F-150",
+      "year": 2004,
+      "miles": 180000,
+      "notes": "",
+      "isCompared": false,
+      "id": 11
+    },
+    {
+      "make": "Toyota",
+      "model": "Yaris",
+      "year": 2012,
+      "miles": 100000,
+      "notes": "John's car",
+      "isCompared": false,
+      "id": 12
     }
   ]
 }

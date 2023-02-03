@@ -8,15 +8,11 @@ import AddCar from './AddCar';
 function App() {
     const [viewMode, setViewMode] = useState("/view_cars")
 
-    function addNewCarToDOM(newCar) {
-      console.log(newCar)
-    }
-
     // switch between components
     function viewModeControl() {
       switch(viewMode) {
         case "/view_cars": return <ViewCars />
-        case "/add_car": return <AddCar addNewCarToDOM={addNewCarToDOM}/>
+        case "/add_car": return <AddCar />
         // case "/add_car": return <TBD />
       }
     }

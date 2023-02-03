@@ -5,11 +5,11 @@ function AddCar({ addNewCarToDOM }) {
         event.preventDefault()
 
         const newCar = {
-            Make: event.target[0].value, 
-            Model: event.target[1].value,
-            Year: parseInt(event.target[2].value),
-            Miles: parseInt(event.target[3].value),
-            Notes: event.target[4].value,
+            make: event.target[0].value, 
+            model: event.target[1].value,
+            year: parseInt(event.target[2].value),
+            miles: parseInt(event.target[3].value),
+            notes: event.target[4].value,
             isCompared: false
           }
       
@@ -19,7 +19,6 @@ function AddCar({ addNewCarToDOM }) {
             body: JSON.stringify(newCar)
         })
           .then(r => r.json())
-          .then(addNewCarToDOM(newCar))
         }
 
     return (
