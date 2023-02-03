@@ -20,7 +20,6 @@ function ViewCars() {
     // comparedCars filters the cas down to the ones that are flagged for comparison
     const comparedCars = cars.filter(car => car.isCompared ? true : false)
 
-
     const filteredCars = cars.filter(car => 
       // conditions for which must be met for the car to be displayed
       (milesRange.min === "" || car.miles >= milesRange.min) &&

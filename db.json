@@ -6,7 +6,6 @@
       "model": "Ranger",
       "year": 2003,
       "miles": 206050,
-      "views": 0,
       "notes": "Leaks oil form the rear differential.",
       "isCompared": false
     },
@@ -16,7 +15,6 @@
       "model": "RAV4",
       "year": 2013,
       "miles": 100120,
-      "views": 0,
       "notes": "Mom's car",
       "isCompared": false
     },
@@ -26,7 +24,6 @@
       "model": "840",
       "year": 1996,
       "miles": 210040,
-      "views": 0,
       "isCompared": false
     },
     {
@@ -35,7 +32,6 @@
       "model": "Nova",
       "year": 1987,
       "miles": 350000,
-      "views": 0,
       "isCompared": false
     },
     {
@@ -44,7 +40,6 @@
       "model": "Impala",
       "year": 1974,
       "miles": 105040,
-      "views": 0,
       "isCompared": false
     },
     {
@@ -53,7 +48,6 @@
       "model": "Accord",
       "year": 2004,
       "miles": 280000,
-      "views": 0,
       "isCompared": false
     },
     {
@@ -62,7 +56,6 @@
       "model": "Grand Caravan",
       "year": 2006,
       "miles": 175000,
-      "views": 0,
       "isCompared": false,
       "notes": "The Vansion!"
     },
@@ -72,7 +65,6 @@
       "model": "Outback",
       "year": 1997,
       "miles": 180000,
-      "views": 0,
       "isCompared": false
     },
     {
@@ -81,9 +73,17 @@
       "model": "Impreza",
       "year": 2013,
       "miles": 102020,
-      "views": 0,
       "notes": "Maddie's car blah blah blah blah blah blah.",
       "isCompared": false
+    },
+    {
+      "Make": "Honda",
+      "Model": "Odysset",
+      "Year": 1999,
+      "Miles": 200000,
+      "Notes": "Test",
+      "isCompared": false,
+      "id": 10
     }
   ]
 }
