@@ -4,31 +4,23 @@ import Header from "./Header";
 import NavBar from './NavBar';
 import ViewCars from './ViewCars';
 import AddCar from './AddCar';
+import Comments from "./Comments";
 
 function App() {
-    const [viewMode, setViewMode] = useState("/view_cars")
-
-    // switch between components
-    // function viewModeControl() {
-    //   switch(viewMode) {
-    //     case "/view_cars": return <ViewCars />
-    //     case "/add_car": return <AddCar />
-    //     // case "/add_car": return <TBD />
-    //     default: return <h1>404 not found</h1>
-    //   }
-    // }
 
   return (
     <div>
       <Header />
-      <NavBar setViewMode={setViewMode}/>
-      {/* {viewModeControl()} */}
+      <NavBar />
       <Switch>
         <Route path="/view_cars">
           <ViewCars />
         </Route>
         <Route path="/add_car">
           <AddCar />
+        </Route>
+        <Route path="/comments">
+          <Comments />
         </Route>
         <Route exact path="/">
           <ViewCars />
@@ -38,7 +30,7 @@ function App() {
         </Route>
       </Switch>
     </div>
-  );
+  )
 }
 
 export default App;

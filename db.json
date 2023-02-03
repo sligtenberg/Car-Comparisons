@@ -103,5 +103,15 @@
       "isCompared": false,
       "id": 12
     }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "text": "Test comment 1"
+    },
+    {
+      "id": 2,
+      "text": "Test comment 2"
+    }
   ]
 }
