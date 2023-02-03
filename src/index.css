@@ -1,3 +1,11 @@
+body {
+  margin: 0;
+  background-color: blanchedalmond;
+}
+
+h1 {
+  text-align: center;
+}
 .car {
   color: blue;
   font-weight: bold;
@@ -7,6 +15,22 @@
 .details {
   color: blue;
 }
+
+#nav-bar {
+  display: flex;
+  background: lightcoral;
+  width: 100%;
+}
+
+#nav-bar button {
+  background-color: lightgrey;
+  border: 1px solid;
+  border-radius: 4px;
+  margin: 5px;
+  font-size: x-large;
+}
+
+
 
 #compare-box {
   margin: 5px;

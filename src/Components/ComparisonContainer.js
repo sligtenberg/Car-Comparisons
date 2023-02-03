@@ -14,7 +14,7 @@ function ComparisonContainer({ unCompareCar, comparedCars, updateNotes }) {
 
     return (
         <div id="conparison-container">
-            <h2>Click car title to remove</h2>
+            <h3>Click make and model to remove</h3>
             <div id="side-by-side">{carComponents}</div>
         </div>
     )

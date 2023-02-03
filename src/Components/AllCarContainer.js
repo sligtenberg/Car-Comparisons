@@ -14,7 +14,7 @@ function AllCarContainer({ cars, compareCar }) {
 
     return (
         <div id="all-car-container">
-            <h2>Click cars to compare</h2>
+            <h3>Click cars to compare</h3>
             {carComponents}
         </div>
     )
