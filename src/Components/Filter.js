@@ -4,14 +4,19 @@ function Filter({ setMilesRange, milesRange, yearRange, setYearRange }) {
 
     return (
         <div id="filter">
-            <form>Miles:
-                <input type="text" placeholder="min" onChange={e => setMilesRange({min: e.target.value, max: milesRange.max})}></input>
-                <input type="text" placeholder="max" onChange={e => setMilesRange({min: milesRange.min, max: e.target.value})}></input>
-            </form>
-            <form>Year:
-                <input type="text" placeholder="min" onChange={e => setYearRange({min: e.target.value, max: yearRange.max})}></input>
-                <input type="text" placeholder="max" onChange={e => setYearRange({min: yearRange.min, max: e.target.value})}></input>
-            </form>
+            <h4>Filter by:</h4>
+            <table>
+                <tr>
+                    <td>Miles</td>
+                    <td><input type="text" placeholder="min" onChange={e => setMilesRange({min: e.target.value, max: milesRange.max})}></input></td>
+                    <td><input type="text" placeholder="max" onChange={e => setMilesRange({min: milesRange.min, max: e.target.value})}></input></td>
+                </tr>
+                <tr>
+                    <td>Year</td>
+                    <td><input type="text" placeholder="min" onChange={e => setYearRange({min: e.target.value, max: yearRange.max})}></input></td>
+                    <td><input type="text" placeholder="max" onChange={e => setMilesRange({min: milesRange.min, max: e.target.value})}></input></td>
+                </tr>
+            </table>
         </div>
     )
 }

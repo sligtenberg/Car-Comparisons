@@ -4,6 +4,7 @@ import Header from "./Header";
 import Filter from './Filter';
 import AllCarContainer from './AllCarContainer';
 import ComparisonContainer from './ComparisonContainer';
+import NavBar from './NavBar';
 
 function App() {
     const [cars, setCars] = useState([])
