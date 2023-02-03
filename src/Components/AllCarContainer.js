@@ -13,8 +13,8 @@ function AllCarContainer({ cars, compareCar }) {
         />)
 
     return (
-        <div>
-            <h2>All Cars</h2>
+        <div id="all-car-container">
+            <h2>Click cars to compare</h2>
             {carComponents}
         </div>
     )

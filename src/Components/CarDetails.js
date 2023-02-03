@@ -16,13 +16,13 @@ function CarDetails({ car, updateNotes }) {
     }
 
     return (
-        <div>
-            <p>Year: {car.year}</p>
-            <p>Miles: {car.miles}</p>
+        <div id="compare-box">
+            <div>Year: {car.year}</div>
+            <div>Miles: {car.miles}</div>
             <form onSubmit={handleNotesSubmit}>
-                <label>Notes: </label>
-                <input type="text" value={notes} onChange={event => setNotes(event.target.value)}/>
-                <button>Submit</button>
+                <label>Notes: </label><br></br>
+                <textarea type="text" value={notes} onChange={event => setNotes(event.target.value)}/><br></br>
+                <button>Update notes</button>
             </form>
         </div>
     )

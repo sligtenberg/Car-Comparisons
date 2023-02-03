@@ -1,5 +1,4 @@
-//import logo from '../logo.svg';
-//import '../App.css';
+import '../index.css';
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Filter from './Filter';
@@ -24,10 +23,10 @@ function App() {
 
     const filteredCars = cars.filter(car => 
       // conditions for which must be met for the car to be displayed
-      (milesRange.min == "" || car.miles >= milesRange.min) &&
-      (milesRange.max == "" || car.miles <= milesRange.max) &&
-      (yearRange.min == "" || car.year >= yearRange.min) &&
-      (yearRange.max == "" || car.year <= yearRange.max)
+      (milesRange.min === "" || car.miles >= milesRange.min) &&
+      (milesRange.max === "" || car.miles <= milesRange.max) &&
+      (yearRange.min === "" || car.year >= yearRange.min) &&
+      (yearRange.max === "" || car.year <= yearRange.max)
       ? true : false)
 
     // this function flags a car for comparison. does not persist to the server
@@ -60,39 +59,15 @@ function App() {
         yearRange={yearRange}
         setYearRange={setYearRange}
       />
-      <div className="row">
-        <div className="col-8">
-          <AllCarContainer cars={filteredCars} compareCar={compareCar}/>
-        </div>
-        <div className="col-4">
-          <ComparisonContainer
-            unCompareCar={unCompareCar}
-            comparedCars={comparedCars}
-            updateNotes={updateNotes}
-          />
-        </div>
+      <div id="main-container">
+        <AllCarContainer cars={filteredCars} compareCar={compareCar}/>
+        <ComparisonContainer
+          unCompareCar={unCompareCar}
+          comparedCars={comparedCars}
+          updateNotes={updateNotes}
+        />
       </div>
     </div>
-
-    /*
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-    */
-
   );
 }
 

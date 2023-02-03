@@ -1,35 +1,58 @@
 h1 {
-  padding: 2rem;
+  color: blue;
+  margin: 5px;
 }
 
-h2 {
-  text-align: center;
+.car {
+  color: blue;
+  font-weight: bold;
+  font-size: large;
 }
 
-.card {
-  width: 50%;
-  margin: 0 auto;
-  text-align: center;
+.details {
+  color: blue;
 }
 
-.list-group {
-  width: 50%;
-  margin: 0 auto;
-  text-align: center;
+#compare-box {
+  margin: 5px;
 }
 
-/*
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#side-by-side {
+  display: flex;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#filter {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  background: lightgreen;
 }
-*/
+
+#main-container {
+  display: flex;
+}
+
+#all-car-container {
+  width: 200px;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  background: lightblue;
+}
+
+#conparison-container {
+  flex: 1;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  background: lightblue;
+}
+
+textarea {
+  width: 200px;
+  height: 100px;
+  overflow: auto;
+}
