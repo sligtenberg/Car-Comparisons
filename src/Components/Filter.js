@@ -5,7 +5,7 @@ function Filter({ milesRange, setMilesRange, yearRange, setYearRange, makeFilter
     return (
         <div id="filter">
             <h3>Filter</h3>
-            <table>
+            <table><tbody>
                 <tr>
                     <td>Make</td>
                     <td><input type="text" onChange={e => setMakeFilter(e.target.value)}></input></td>
@@ -20,7 +20,7 @@ function Filter({ milesRange, setMilesRange, yearRange, setYearRange, makeFilter
                     <td><input type="text" placeholder="min" onChange={e => setYearRange({min: e.target.value, max: yearRange.max})}></input></td>
                     <td><input type="text" placeholder="max" onChange={e => setMilesRange({min: milesRange.min, max: e.target.value})}></input></td>
                 </tr>
-            </table>
+            </tbody></table>
         </div>
     )
 }

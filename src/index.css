@@ -16,6 +16,14 @@ h1 {
   color: blue;
 }
 
+#add-car-form {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  background: lightblue;
+}
+
 #nav-bar {
   display: flex;
   background: lightcoral;

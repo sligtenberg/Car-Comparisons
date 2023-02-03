@@ -7,8 +7,8 @@ function CarCard({ car, handleClick, detailView, updateNotes }) {
 
     return (
         <div >
-            <div class="car" onClick={handleClick}>{car.make} {car.model}</div>
-            <div class="details">{details()}</div>
+            <div className="car" onClick={handleClick}>{car.make} {car.model}</div>
+            <div className="details">{details()}</div>
         </div>
       );
     }
