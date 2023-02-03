@@ -1,11 +1,11 @@
 import React from "react";
 
-function NavBar() {
+function NavBar({ setViewMode }) {
     return (
         <div id="nav-bar">
-            <button>View Cars</button>
-            <button>Add Car</button>
-            <button>TBD</button>
+            <button onClick={() => setViewMode("/view_cars")}>View Cars</button>
+            <button onClick={() => setViewMode("/add_car")}>Add Car</button>
+            <button onClick={() => setViewMode("/TBD")}>TBD</button>
         </div>
     )
 }
