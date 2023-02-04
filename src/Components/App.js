@@ -38,10 +38,12 @@ function App() {
 
   // this function flags a car for comparison. does not persist to the server
   function compareCar(carToCompareId) {
-    setCars(cars.map(car => {
-      if (car.id === carToCompareId) car.isCompared = true
-      return car
-    }))
+    if (window.location.pathname === '/' || window.location.pathname === '/compare_cars') {
+      setCars(cars.map(car => {
+        if (car.id === carToCompareId) car.isCompared = true
+        return car
+      }))
+    }
   }
 
   // this function removes a car from the comparison container. does not persist to server
