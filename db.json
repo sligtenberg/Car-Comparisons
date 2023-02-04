@@ -103,6 +103,15 @@
       "notes": "John's car",
       "isCompared": false,
       "id": 12
+    },
+    {
+      "isCompared": false,
+      "make": "Honda",
+      "model": "Civic",
+      "year": "2005",
+      "miles": "180000",
+      "notes": "Smashed :(",
+      "id": 13
     }
   ],
   "comments": [

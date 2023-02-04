@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Switch, Route } from "react-router-dom";
 import NavBar from './NavBar';
 import ViewCars from './ViewCars';
@@ -6,7 +6,6 @@ import AddCar from './AddCar';
 import Comments from "./Comments";
 
 function App() {
-
   return (
     <div>
       <h1>Stevo's Car Database</h1>
