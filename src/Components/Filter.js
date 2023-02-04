@@ -2,10 +2,7 @@ import React from "react";
 
 function Filter({ carFilter, setCarFilter }) {
     function handleFormChange(event) {
-        console.log(event.target.name)
-        console.log(event.target.value)
         setCarFilter({...carFilter, [event.target.name]: event.target.value})
-        console.log(carFilter)
     }
 
     return (
@@ -16,15 +13,15 @@ function Filter({ carFilter, setCarFilter }) {
                     <td>Make</td>
                     <td><input type="text" name="make"></input></td>
                     <td>Miles</td>
-                    <td><input type="text" placeholder="min" name="miles: {min}"></input></td>
-                    <td><input type="text" placeholder="max" name="miles.max"></input></td>
+                    <td><input type="text" placeholder="min" name="milesMin"></input></td>
+                    <td><input type="text" placeholder="max" name="milesMax"></input></td>
                 </tr>
                 <tr>
                     <td>Model</td>
                     <td><input type="text" name="model"></input></td>
                     <td>Year</td>
-                    <td><input type="text" placeholder="min" name="year.min"></input></td>
-                    <td><input type="text" placeholder="max" name="year.max"></input></td>
+                    <td><input type="text" placeholder="min" name="yearMin"></input></td>
+                    <td><input type="text" placeholder="max" name="yearMax"></input></td>
                 </tr>
             </tbody></table></form>
         </div>

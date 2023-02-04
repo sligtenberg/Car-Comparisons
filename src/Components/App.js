@@ -10,8 +10,10 @@ import Comments from "./Comments";
 function App() {
   const [cars, setCars] = useState([])
   const [carFilter, setCarFilter] = useState({
-    miles: {min: "", max: ""},
-    year: {min: "", max: ""},
+    milesMin: "",
+    milesMax: "",
+    yearMin: "",
+    yearMax: "",
     make: "",
     model: ""
   })
@@ -28,12 +30,12 @@ function App() {
 
   const filteredCars = cars.filter(car => 
       // conditions for which must be met for the car to be displayed
-      (carFilter.miles.min === "" || car.miles >= carFilter.miles.min) &&
-      (carFilter.miles.max === "" || car.miles <= carFilter.miles.max) &&
-      (carFilter.year.min  === "" || car.year  >= carFilter.year.min) &&
-      (carFilter.year.max  === "" || car.year  <= carFilter.year.max) &&
-      (carFilter.make      === "" || car.make.toLowerCase().includes(carFilter.make.toLowerCase())) &&
-      (carFilter.model     === "" || car.model.toLowerCase().includes(carFilter.model.toLowerCase()))
+      (carFilter.milesMin === "" || car.miles >= carFilter.milesMin) &&
+      (carFilter.milesMax === "" || car.miles <= carFilter.milesMax) &&
+      (carFilter.yearMin  === "" || car.year  >= carFilter.yearMin) &&
+      (carFilter.yearMax  === "" || car.year  <= carFilter.yearMax) &&
+      (carFilter.make     === "" || car.make.toLowerCase().includes(carFilter.make.toLowerCase())) &&
+      (carFilter.model    === "" || car.model.toLowerCase().includes(carFilter.model.toLowerCase()))
     ? true : false)
 
   // this function flags a car for comparison. does not persist to the server
