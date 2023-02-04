@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Switch, Route } from "react-router-dom";
-import Header from "./Header";
 import NavBar from './NavBar';
 import ViewCars from './ViewCars';
 import AddCar from './AddCar';
@@ -10,7 +9,7 @@ function App() {
 
   return (
     <div>
-      <Header />
+      <h1>Stevo's Car Database</h1>
       <NavBar />
       <Switch>
         <Route path="/view_cars">
