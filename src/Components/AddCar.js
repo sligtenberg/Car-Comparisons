@@ -1,36 +1,27 @@
 import React, { useState } from "react";
 
 function AddCar() {
+    // newCar holds the form data, and will be the car that is posted to the server
     const [newCar, setNewCar] = useState({isCompared: false})
 
+    // chages to the form update the newCar immediately via a controlled form
     function handleFormChange(event) {
         setNewCar({...newCar, [event.target.name]: event.target.value})
-        //console.log(newCar)
     }
 
-    // called when user submit a new car
-    // posts the new car to the server
+    // add newCar to the server
+    // we do not use preventDefault because we want the page to refresh
+    // we don't need to keep the form populated after submission
     function handleAddCarSubmit() {
-        // event.preventDefault()
-        // const newCar = {
-        //     make: event.target[0].value, 
-        //     model: event.target[1].value,
-        //     year: parseInt(event.target[2].value),
-        //     miles: parseInt(event.target[3].value),
-        //     notes: event.target[4].value,
-        //     isCompared: false
-        // }
-      
         fetch("http://localhost:3001/cars", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(newCar)
         })
-        console.log(newCar)
     }
 
     return (
-        <form id="add-car-form" onSubmit={handleAddCarSubmit} onChange={event => handleFormChange(event)}>
+        <form id="add-car-form" onSubmit={handleAddCarSubmit} onChange={handleFormChange}>
             <table><tbody>
                 <tr><td>Make:</ td><td><input    type="text"   name="make" ></input   ></td></tr>
                 <tr><td>Model:</td><td><input    type="text"   name="model"></input   ></td></tr>

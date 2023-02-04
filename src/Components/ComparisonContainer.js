@@ -2,14 +2,14 @@ import React from "react";
 import CarCard from "./CarCard";
 
 // this contains only cars that are currently being compared
-function ComparisonContainer({ unCompareCar, comparedCars, updateNotes }) {
+function ComparisonContainer({ unCompareCar, comparedCars, updateCar }) {
     const carComponents = comparedCars.map(car => 
         <CarCard
             key={car.id}
             car={car}
             detailView={true}
             handleClick={() => unCompareCar(car.id)}
-            updateNotes={updateNotes}
+            updateCar={updateCar}
         />)
 
     return (

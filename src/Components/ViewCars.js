@@ -47,8 +47,8 @@ function ViewCars() {
     }
 
     // update the notes on the frontend without refreshing
-    function updateNotes(carToUpdate) {
-      setCars(cars.map(car => car.id === carToUpdate.id ? carToUpdate : car))
+    function updateCar(updatedCar) {
+      setCars(cars.map(car => car.id === updatedCar.id ? updatedCar : car))
     }
 
     return (
@@ -68,7 +68,7 @@ function ViewCars() {
               <ComparisonContainer
                 unCompareCar={unCompareCar}
                 comparedCars={comparedCars}
-                updateNotes={updateNotes}
+                updateCar={updateCar}
               />
             </div>
         </div>

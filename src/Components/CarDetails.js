@@ -1,18 +1,23 @@
 import React, { useState } from "react";
 
-function CarDetails({ car, updateNotes }) {
+function CarDetails({ car, updateCar }) {
+    // notes is displayed in the textarea
     const [notes, setNotes ] = useState(car.notes)
+
+    function handleNotesChange(event) {
+        setNotes(event.target.value)
+    }
 
     function handleNotesSubmit(event) {
         event.preventDefault()
-        car.notes = event.target[0].value
+        car.notes = notes
         fetch(`http://localhost:3001/cars/${car.id}`, {
             method: "PATCH",
             headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({"notes": event.target[0].value})
+            body: JSON.stringify({"notes": notes})
           })
           .then(r => r.json())
-          .then(updateNotes(car))
+          .then(updateCar(car))
     }
 
     return (
@@ -21,7 +26,7 @@ function CarDetails({ car, updateNotes }) {
             <div>Miles: {car.miles}</div>
             <form onSubmit={handleNotesSubmit}>
                 <label>Notes: </label><br></br>
-                <textarea type="text" value={notes} onChange={event => setNotes(event.target.value)}/><br></br>
+                <textarea type="text" value={notes} onChange={handleNotesChange}/><br></br>
                 <button>Update notes</button>
             </form>
         </div>
