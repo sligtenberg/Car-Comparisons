@@ -5,9 +5,6 @@ import Filter from "./Filter";
 import CarList from "./CarList";
 import ComparisonContainer from './ComparisonContainer';
 import AddCar from "./AddCar";
-
-
-import ViewCars from './ViewCars';
 import Comments from "./Comments";
 
 function App() {
@@ -26,7 +23,7 @@ function App() {
       .then(setCars)
   }, [])
 
-  // comparedCars filters the cas down to the ones that are flagged for comparison
+  // comparedCars filters the cars to only include cars that fir the filter criteria
   const comparedCars = cars.filter(car => car.isCompared ? true : false)
 
   const filteredCars = cars.filter(car => 
@@ -57,7 +54,6 @@ function App() {
 
   // update the notes on the frontend without refreshing
   function updateCar(updatedCar) {
-    console.log(updatedCar)
     setCars(cars.map(car => car.id === updatedCar.id ? updatedCar : car))
   }
 
@@ -83,7 +79,7 @@ function App() {
           <Comments />
         </Route>
         <Route exact path="/">
-        <div className="main-container">
+          <div className="main-container">
             <CarList cars={filteredCars} compareCar={compareCar}/>
             <ComparisonContainer unCompareCar={unCompareCar} comparedCars={comparedCars} updateCar={updateCar}/>
           </div>
@@ -91,25 +87,7 @@ function App() {
         <Route path="*">
           <h1>404 not found</h1>
         </Route>
-
       </Switch>
-      {/* <Switch>
-        <Route path="/view_cars">
-          <ViewCars />
-        </Route>
-        <Route path="/add_car">
-          <AddCar />
-        </Route>
-        <Route path="/comments">
-          <Comments />
-        </Route>
-        <Route exact path="/">
-          <ViewCars />
-        </Route>
-        <Route path="*">
-          <h1>404 not found</h1>
-        </Route>
-      </Switch> */}
     </div>
   )
 }

@@ -31,4 +31,4 @@ function Filter({ carFilter, setCarFilter }) {
     )
 }
 
-export default Filter
+export default Filter;

@@ -47,7 +47,7 @@ function Comments() {
                 <textarea></textarea><br></br>
                 <button>Submit comment</button>
             </form>
-            <h3>Comments</h3>
+            <h2>Comments</h2>
             {commentCards}
         </div>
     )
