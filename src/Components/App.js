@@ -25,6 +25,11 @@ function App() {
       .then(setCars)
   }, [])
 
+  // add car to state
+  function addCarToState(newCar) {
+    setCars([...cars, newCar])
+}
+
   // comparedCars filters the cars to only include cars that fir the filter criteria
   const comparedCars = cars.filter(car => car.isCompared ? true : false)
 
@@ -76,7 +81,7 @@ function App() {
         <Route path="/add_car">
           <div className="main-container">
             <CarList cars={filteredCars} compareCar={compareCar}/>
-            <AddCar />
+            <AddCar addCarToState={addCarToState}/>
           </div>
         </Route> 
         <Route path="/comments">

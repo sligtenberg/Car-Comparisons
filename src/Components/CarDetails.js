@@ -18,6 +18,7 @@ function CarDetails({ car, updateCar }) {
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({"notes": notes})
           })
+          .then(r => r.json())
     }
 
     return (

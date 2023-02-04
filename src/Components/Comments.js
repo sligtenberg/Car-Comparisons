@@ -16,7 +16,6 @@ function Comments() {
     // adds the comment to the DOM without a refresh
     function submitNewComment(event) {
         event.preventDefault()
-
         const newComment = {id: comments.length + 1 ,text: event.target[0].value}
 
         fetch("http://localhost:3001/comments", {

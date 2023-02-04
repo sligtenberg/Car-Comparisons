@@ -121,6 +121,51 @@
       "miles": "50000",
       "notes": "Dream car!",
       "id": 14
+    },
+    {
+      "isCompared": false,
+      "make": "Ford",
+      "model": "Transit",
+      "year": "2023",
+      "miles": "0",
+      "notes": "",
+      "id": 15
+    },
+    {
+      "isCompared": false,
+      "make": "Ford",
+      "model": "Maverik",
+      "year": "2022",
+      "miles": "0",
+      "notes": "Dad's dream car",
+      "id": 16
+    },
+    {
+      "isCompared": false,
+      "make": "Toyota",
+      "model": "Sienna",
+      "year": "2006",
+      "miles": "200000",
+      "notes": "Karl's car",
+      "id": 17
+    },
+    {
+      "isCompared": false,
+      "make": "Plymouth",
+      "notes": "Dad's first car in America.",
+      "model": "Furry",
+      "year": "1960",
+      "miles": "150000",
+      "id": 18
+    },
+    {
+      "isCompared": false,
+      "make": "Jaguar",
+      "model": "E-type",
+      "year": "1965",
+      "miles": "50000",
+      "notes": "Dad's favorite kind of car.",
+      "id": 19
     }
   ],
   "comments": [
