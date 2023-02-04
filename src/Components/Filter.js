@@ -1,26 +1,32 @@
 import React from "react";
 
-function Filter({ milesRange, setMilesRange, yearRange, setYearRange, makeFilter, setMakeFilter, modelFilter, setModelFilter }) {
+function Filter({ carFilter, setCarFilter }) {
+    function handleFormChange(event) {
+        console.log(event.target.name)
+        console.log(event.target.value)
+        setCarFilter({...carFilter, [event.target.name]: event.target.value})
+        console.log(carFilter)
+    }
 
     return (
         <div id="filter">
             <h3>Filter</h3>
-            <table><tbody>
+            <form onChange={handleFormChange}><table><tbody>
                 <tr>
                     <td>Make</td>
-                    <td><input type="text" onChange={e => setMakeFilter(e.target.value)}></input></td>
+                    <td><input type="text" name="make"></input></td>
                     <td>Miles</td>
-                    <td><input type="text" placeholder="min" onChange={e => setMilesRange({min: e.target.value, max: milesRange.max})}></input></td>
-                    <td><input type="text" placeholder="max" onChange={e => setMilesRange({min: milesRange.min, max: e.target.value})}></input></td>
+                    <td><input type="text" placeholder="min" name="miles: {min}"></input></td>
+                    <td><input type="text" placeholder="max" name="miles.max"></input></td>
                 </tr>
                 <tr>
                     <td>Model</td>
-                    <td><input type="text" onChange={e => setModelFilter(e.target.value)}></input></td>
+                    <td><input type="text" name="model"></input></td>
                     <td>Year</td>
-                    <td><input type="text" placeholder="min" onChange={e => setYearRange({min: e.target.value, max: yearRange.max})}></input></td>
-                    <td><input type="text" placeholder="max" onChange={e => setMilesRange({min: milesRange.min, max: e.target.value})}></input></td>
+                    <td><input type="text" placeholder="min" name="year.min"></input></td>
+                    <td><input type="text" placeholder="max" name="year.max"></input></td>
                 </tr>
-            </tbody></table>
+            </tbody></table></form>
         </div>
     )
 }

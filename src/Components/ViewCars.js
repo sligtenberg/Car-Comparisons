@@ -5,10 +5,12 @@ import ComparisonContainer from './ComparisonContainer';
 
 function ViewCars() {
     const [cars, setCars] = useState([])
-    const [milesRange, setMilesRange] = useState({min: "", max: ""})
-    const [yearRange, setYearRange] = useState({min: "", max: ""})
-    const [makeFilter, setMakeFilter] = useState("")
-    const [modelFilter, setModelFilter] = useState("")
+    const [carFilter, setCarFilter] = useState({
+      miles: {min: "", max: ""},
+      year: {min: "", max: ""},
+      make: "",
+      model: ""
+    })
 
     // populate the main car container with all the cars
     useEffect(() => {
@@ -21,13 +23,13 @@ function ViewCars() {
     const comparedCars = cars.filter(car => car.isCompared ? true : false)
 
     const filteredCars = cars.filter(car => 
-      // conditions for which must be met for the car to be displayed
-      (milesRange.min === "" || car.miles >= milesRange.min) &&
-      (milesRange.max === "" || car.miles <= milesRange.max) &&
-      (yearRange.min === "" || car.year >= yearRange.min) &&
-      (yearRange.max === "" || car.year <= yearRange.max) &&
-      (makeFilter === "" || car.make.toLowerCase().includes(makeFilter.toLowerCase())) &&
-      (modelFilter === "" || car.model.toLowerCase().includes(modelFilter.toLowerCase()))
+        // conditions for which must be met for the car to be displayed
+        (carFilter.miles.min === "" || car.miles >= carFilter.miles.min) &&
+        (carFilter.miles.max === "" || car.miles <= carFilter.miles.max) &&
+        (carFilter.year.min  === "" || car.year  >= carFilter.year.min) &&
+        (carFilter.year.max  === "" || car.year  <= carFilter.year.max) &&
+        (carFilter.make      === "" || car.make.toLowerCase().includes(carFilter.make.toLowerCase())) &&
+        (carFilter.model     === "" || car.model.toLowerCase().includes(carFilter.model.toLowerCase()))
       ? true : false)
 
     // this function flags a car for comparison. does not persist to the server
@@ -48,21 +50,13 @@ function ViewCars() {
 
     // update the notes on the frontend without refreshing
     function updateCar(updatedCar) {
+      console.log(updatedCar)
       setCars(cars.map(car => car.id === updatedCar.id ? updatedCar : car))
     }
 
     return (
         <div>
-            <Filter
-              milesRange={milesRange}
-              setMilesRange={setMilesRange}
-              yearRange={yearRange}
-              setYearRange={setYearRange}
-              makeFilter={makeFilter}
-              setMakeFilter={setMakeFilter}
-              modelFilter={modelFilter}
-              setModelFilter={setModelFilter}
-            />
+            <Filter carFilter={carFilter} setCarFilter={setCarFilter}/>
             <div id="main-container">
               <AllCarContainer cars={filteredCars} compareCar={compareCar}/>
               <ComparisonContainer

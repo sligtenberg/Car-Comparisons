@@ -8,16 +8,16 @@ function CarDetails({ car, updateCar }) {
         setNotes(event.target.value)
     }
 
+    // update the server and update the DOM without refreshing
     function handleNotesSubmit(event) {
         event.preventDefault()
         car.notes = notes
+        updateCar(car)
         fetch(`http://localhost:3001/cars/${car.id}`, {
             method: "PATCH",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({"notes": notes})
           })
-          .then(r => r.json())
-          .then(updateCar(car))
     }
 
     return (
