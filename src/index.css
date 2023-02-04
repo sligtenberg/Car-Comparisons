@@ -60,14 +60,6 @@ a {
   border-radius: 10px;
   padding: 10px;
   margin: 5px;
-  background: lightgreen;
-}
-
-#add-car-form {
-  border: 1px solid;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 5px;
   background: lightblue;
 }
 
@@ -87,11 +79,11 @@ a {
   background: lightgreen;
 }
 
-#main-container {
+.main-container {
   display: flex;
 }
 
-#all-car-container {
+.car-list {
   width: 200px;
   border: 1px solid;
   border-radius: 10px;
@@ -100,7 +92,7 @@ a {
   background: lightblue;
 }
 
-#conparison-container {
+.detail-container {
   flex: 1;
   border: 1px solid;
   border-radius: 10px;

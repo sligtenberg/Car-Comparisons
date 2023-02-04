@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Filter from './Filter';
-import AllCarContainer from './AllCarContainer';
+import CarList from './CarList';
 import ComparisonContainer from './ComparisonContainer';
 
 function ViewCars() {
@@ -58,7 +58,7 @@ function ViewCars() {
         <div>
             <Filter carFilter={carFilter} setCarFilter={setCarFilter}/>
             <div id="main-container">
-              <AllCarContainer cars={filteredCars} compareCar={compareCar}/>
+              <CarList cars={filteredCars} compareCar={compareCar}/>
               <ComparisonContainer
                 unCompareCar={unCompareCar}
                 comparedCars={comparedCars}

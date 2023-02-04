@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 function AddCar() {
     // newCar holds the form data, and will be the car that is posted to the server
     const [newCar, setNewCar] = useState({isCompared: false})
@@ -21,16 +22,19 @@ function AddCar() {
     }
 
     return (
-        <form id="add-car-form" onSubmit={handleAddCarSubmit} onChange={handleFormChange}>
-            <table><tbody>
-                <tr><td>Make:</ td><td><input    type="text"   name="make" ></input   ></td></tr>
-                <tr><td>Model:</td><td><input    type="text"   name="model"></input   ></td></tr>
-                <tr><td>Year:</ td><td><input    type="number" name="year" ></input   ></td></tr>
-                <tr><td>Miles:</td><td><input    type="number" name="miles"></input   ></td></tr>
-                <tr><td>Notes:</td><td><textarea type="text"   name="notes"></textarea></td></tr>
-            </tbody></table>
-            <button>Add car</button>
-        </form>
+        <div className="detail-container">
+            <h3>Create a car to add</h3>
+            <form onSubmit={handleAddCarSubmit} onChange={handleFormChange}>
+                <table><tbody>
+                    <tr><td>Make:</ td><td><input    type="text"   name="make" ></input   ></td></tr>
+                    <tr><td>Model:</td><td><input    type="text"   name="model"></input   ></td></tr>
+                    <tr><td>Year:</ td><td><input    type="number" name="year" ></input   ></td></tr>
+                    <tr><td>Miles:</td><td><input    type="number" name="miles"></input   ></td></tr>
+                    <tr><td>Notes:</td><td><textarea type="text"   name="notes"></textarea></td></tr>
+                </tbody></table>
+                <button>Add car</button>
+            </form>
+        </div>
     )
 }
 
