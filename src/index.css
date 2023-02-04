@@ -29,7 +29,7 @@ a {
   padding-right: 15px;
   padding-top: 3px;
   padding-bottom: 3px;
-  margin: 5px;
+  margin: 10px;
   font-size: x-large;
   font-weight: bold;
   text-decoration: none;
@@ -39,10 +39,6 @@ a {
   color: blue;
   font-weight: bold;
   font-size: large;
-}
-
-.details {
-  color: blue;
 }
 
 .comment {
@@ -55,7 +51,7 @@ a {
 }
 
 #delete-comment-btn {
-  border-radius: 5px;
+  border-radius: 4px;
   float: right;
 }
 
@@ -68,7 +64,7 @@ a {
 }
 
 #compare-box {
-  margin: 5px;
+  margin: 10px;
 }
 
 #side-by-side {
@@ -80,6 +76,7 @@ a {
   border-radius: 10px;
   padding: 10px;
   margin: 5px;
+  margin-top: 10px;
   background: lightgreen;
 }
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function CarDetails({ car, updateCar }) {
-    // notes is displayed in the textarea
+    // notes are displayed in the textarea
     const [notes, setNotes ] = useState(car.notes)
 
     function handleNotesChange(event) {
