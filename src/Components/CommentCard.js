@@ -1,8 +1,11 @@
 import React from "react";
 
-function CommentCard({ text }) {
+function CommentCard({ comment, handleCommentDelete }) {
     return (
-        <div>{text}</div>
+        <div className="comment">
+            {comment.text}
+            <button id="delete-comment-btn" onClick={() => handleCommentDelete(comment.id)}>X</button>
+        </div>
     )
 }
 

@@ -32,7 +32,8 @@
       "model": "Nova",
       "year": 1987,
       "miles": 350000,
-      "isCompared": false
+      "isCompared": false,
+      "notes": "This car reached 350000 miles! Then it got donated to NPR."
     },
     {
       "id": 5,
@@ -107,7 +108,7 @@
   "comments": [
     {
       "id": 1,
-      "text": "Test comment 1"
+      "text": "Test comment 1."
     },
     {
       "id": 2,

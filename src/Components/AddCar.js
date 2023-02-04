@@ -11,15 +11,14 @@ function AddCar({ addNewCarToDOM }) {
             miles: parseInt(event.target[3].value),
             notes: event.target[4].value,
             isCompared: false
-          }
+        }
       
         fetch("http://localhost:3001/cars", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(newCar)
         })
-          .then(r => r.json())
-        }
+    }
 
     return (
         <form id="add-car-form" onSubmit={handleAddCarSubmit}>
