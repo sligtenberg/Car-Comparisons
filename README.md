@@ -1,6 +1,6 @@
-# Stevo's Cars Intro
+# Stevo's Car Database Intro
 
-Stevo's Cars allows users to select cars to compare side-by-side.
+Stevo's Car Database is a tool for user to compare cars side-byside.
 
 # Implementation
 
@@ -16,7 +16,13 @@ This will run the backend on the port 3001
 
 # Using the app
 
-In the app, click on a car to add it to the comparison area. In the comparison area, more details are displayed in a way that the cars may be compared side-by-side. In the comparison area, click a car's title to remove it. The notes can be modified. When submitted, these notes with persist to the backend.
+Available cars are listed on the left. Use the filter at the top to filter cars by stated criteria. Use the NavBar to navigate between comparing cars, adding a new car, or leaving a comment.
+
+While comparing cars, click a car in the list to add it to the comparison container. Click the care make or model in the comparison container to remove it. Notes are displayed in a text area and may be modified. Once submitted, the new notes persist to the server.
+
+When adding a car, fill out the form with the new car's information and then click submit. This will add the car to the list on the left and to the database on the server.
+
+On the comments page, past comments may be viewed. New comments can be added with the new comment form. Old comments can be deleted by clicking the "X" on the right hand side of the given comment.
 
 # Getting Started with Create React App
 
