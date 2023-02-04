@@ -24,7 +24,8 @@
       "model": "840",
       "year": 1996,
       "miles": 210040,
-      "isCompared": false
+      "isCompared": false,
+      "notes": "Test"
     },
     {
       "id": 4,
