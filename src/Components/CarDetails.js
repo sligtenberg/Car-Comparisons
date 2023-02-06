@@ -13,7 +13,7 @@ function CarDetails({ car, updateCar }) {
         event.preventDefault()
         car.notes = notes
         updateCar(car)
-        fetch(`http://localhost:3001/cars/${car.id}`, {
+        fetch(`http://localhost:3000/cars/${car.id}`, {
             method: "PATCH",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({"notes": notes})

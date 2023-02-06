@@ -20,7 +20,7 @@ function App() {
 
   // populate the main car container with all the cars
   useEffect(() => {
-      fetch('http://localhost:3001/cars')
+      fetch('http://localhost:3000/cars')
       .then(r => r.json())
       .then(setCars)
   }, [])

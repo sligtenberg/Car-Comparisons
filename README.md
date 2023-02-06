@@ -8,11 +8,11 @@ To install Stevo's Cars, clone the repository to your local environement. Car da
 
 $json-server --watch db.json
 
-This will create a server storing the car data at http://localhost:3001/cars. In another terminal window, run the command:
+This will create a server storing the car data at http://localhost:3000/cars. In another terminal window, run the command:
 
 $npm run server
 
-This will run the backend on the port 3001
+This will run the backend on the port 3000
 
 # Using the app
 

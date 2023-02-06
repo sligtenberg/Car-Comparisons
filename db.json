@@ -6,7 +6,7 @@
       "model": "Ranger",
       "year": 2003,
       "miles": 206050,
-      "notes": "Leaks oil form the rear differential. And has a winch.",
+      "notes": "Leaks oil form the rear differential. Also has a winch.",
       "isCompared": false
     },
     {
@@ -163,9 +163,9 @@
       "isCompared": false,
       "make": "Jaguar",
       "model": "E-type",
-      "year": "1965",
-      "miles": "50000",
-      "notes": "Dad's favorite kind of car.",
+      "year": "1968",
+      "miles": "10000",
+      "notes": "",
       "id": 19
     }
   ],

@@ -21,7 +21,7 @@ function AddCar({ addCarToState }) {
     // we don't need to keep the form populated after submission
     function handleAddCarSubmit(event) {
         event.preventDefault()
-        fetch("http://localhost:3001/cars", {
+        fetch("http://localhost:3000/cars", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(formData)

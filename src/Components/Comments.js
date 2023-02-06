@@ -6,7 +6,7 @@ function Comments() {
 
     // populate comments from server
     useEffect(() => {
-        fetch('http://localhost:3001/comments')
+        fetch('http://localhost:3000/comments')
         .then(r => r.json())
         .then(setComments)
     }, [])
@@ -18,7 +18,7 @@ function Comments() {
         event.preventDefault()
         const newComment = {id: comments.length + 1 ,text: event.target[0].value}
 
-        fetch("http://localhost:3001/comments", {
+        fetch("http://localhost:3000/comments", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(newComment)
@@ -29,7 +29,7 @@ function Comments() {
 
     // delete a comment form the server and DOM
     function handleCommentDelete(commentToDeleteId) {
-        fetch(`http://localhost:3001/comments/${commentToDeleteId}`, {
+        fetch(`http://localhost:3000/comments/${commentToDeleteId}`, {
             method: "DELETE"
         })
         .then(r => r.json())
