@@ -13,6 +13,8 @@ function AddCar({ addCarToState }) {
 
     // changes to the form update the formData immediately via a controlled form
     function handleFormChange(event) {
+        console.log(event.target.name)
+        console.log(event.target.value)
         setFormData({...formData, [event.target.name]: event.target.value})
     }
 
@@ -41,13 +43,13 @@ function AddCar({ addCarToState }) {
     return (
         <div className="detail-container">
             <h3>Create a car to add</h3>
-            <form onSubmit={handleAddCarSubmit} onChange={handleFormChange}>
+            <form onSubmit={handleAddCarSubmit} >
                 <table><tbody>
-                    <tr><td>Make:</ td><td><input    type="text"   value={formData.make}  name="make" ></input   ></td></tr>
-                    <tr><td>Model:</td><td><input    type="text"   value={formData.model} name="model"></input   ></td></tr>
-                    <tr><td>Year:</ td><td><input    type="number" value={formData.year}  name="year" ></input   ></td></tr>
-                    <tr><td>Miles:</td><td><input    type="number" value={formData.miles} name="miles"></input   ></td></tr>
-                    <tr><td>Notes:</td><td><textarea type="text"   value={formData.notes} name="notes"></textarea></td></tr>
+                    <tr><td>Make:</ td><td><input    type="text"   value={formData.make}  name="make"  onChange={handleFormChange}></input   ></td></tr>
+                    <tr><td>Model:</td><td><input    type="text"   value={formData.model} name="model" onChange={handleFormChange}></input   ></td></tr>
+                    <tr><td>Year:</ td><td><input    type="number" value={formData.year}  name="year"  onChange={handleFormChange}></input   ></td></tr>
+                    <tr><td>Miles:</td><td><input    type="number" value={formData.miles} name="miles" onChange={handleFormChange}></input   ></td></tr>
+                    <tr><td>Notes:</td><td><textarea type="text"   value={formData.notes} name="notes" onChange={handleFormChange}></textarea></td></tr>
                 </tbody></table>
                 <button>Add car</button>
             </form>

@@ -15,7 +15,7 @@
       "model": "RAV4",
       "year": 2013,
       "miles": 100120,
-      "notes": "Mom's car",
+      "notes": "Mom's car.",
       "isCompared": false
     },
     {
@@ -167,6 +167,15 @@
       "miles": "10000",
       "notes": "",
       "id": 19
+    },
+    {
+      "isCompared": false,
+      "make": "Plymouth",
+      "model": "Furry",
+      "year": "1973",
+      "miles": "100000",
+      "notes": "",
+      "id": 20
     }
   ],
   "comments": [
