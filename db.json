@@ -6,7 +6,7 @@
       "model": "Ranger",
       "year": 2003,
       "miles": 206050,
-      "notes": "Leaks oil form the rear differential. Also has a winch.",
+      "notes": "Leaks oil form the rear differential. ",
       "isCompared": false
     },
     {
@@ -176,16 +176,21 @@
       "miles": "100000",
       "notes": "",
       "id": 20
+    },
+    {
+      "isCompared": false,
+      "make": "Honda",
+      "model": "Accord",
+      "year": "1994",
+      "miles": "200000",
+      "notes": "My old car.",
+      "id": 21
     }
   ],
   "comments": [
     {
       "id": 1,
       "text": "Test comment 1."
-    },
-    {
-      "id": 2,
-      "text": "Test comment 2"
     }
   ]
 }

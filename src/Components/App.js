@@ -6,6 +6,7 @@ import CarList from "./CarList";
 import ComparisonContainer from './ComparisonContainer';
 import AddCar from "./AddCar";
 import Comments from "./Comments";
+import Challenge from "./Challenge";
 
 function App() {
   const [cars, setCars] = useState([])
@@ -18,7 +19,7 @@ function App() {
     model: ""
   })
 
-  // populate the main car container with all the cars
+  // populate the main car container with all the cars upon load
   useEffect(() => {
       fetch('http://localhost:3000/cars')
       .then(r => r.json())
@@ -34,11 +35,11 @@ function App() {
   const comparedCars = cars.filter(car => car.isCompared ? true : false)
 
   const filteredCars = cars.filter(car => 
-      // conditions for which must be met for the car to be displayed
-      (carFilter.milesMin === "" || car.miles >= carFilter.milesMin) &&
-      (carFilter.milesMax === "" || car.miles <= carFilter.milesMax) &&
-      (carFilter.yearMin  === "" || car.year  >= carFilter.yearMin) &&
-      (carFilter.yearMax  === "" || car.year  <= carFilter.yearMax) &&
+      // conditions which must be met for the car to be displayed
+      (carFilter.milesMin === "" || parseInt(car.miles) >= carFilter.milesMin) &&
+      (carFilter.milesMax === "" || parseInt(car.miles) <= carFilter.milesMax) &&
+      (carFilter.yearMin  === "" || parseInt(car.year)  >= carFilter.yearMin) &&
+      (carFilter.yearMax  === "" || parseInt(car.year)  <= carFilter.yearMax) &&
       (carFilter.make     === "" || car.make.toLowerCase().includes(carFilter.make.toLowerCase())) &&
       (carFilter.model    === "" || car.model.toLowerCase().includes(carFilter.model.toLowerCase()))
     ? true : false)
@@ -71,6 +72,7 @@ function App() {
       <h1>Stevo's Car Database</h1>
       <NavBar />
       <Filter carFilter={carFilter} setCarFilter={setCarFilter}/>
+      <Challenge />
       <Switch>
         <Route path="/compare_cars">
           <div className="main-container">

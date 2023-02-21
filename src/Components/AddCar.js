@@ -13,8 +13,8 @@ function AddCar({ addCarToState }) {
 
     // changes to the form update the formData immediately via a controlled form
     function handleFormChange(event) {
-        console.log(event.target.name)
-        console.log(event.target.value)
+        //console.log(event.target.name)
+        //console.log(event.target.value)
         setFormData({...formData, [event.target.name]: event.target.value})
     }
 
